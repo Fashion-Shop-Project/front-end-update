@@ -14,6 +14,7 @@ import CartIcon from './components/CartIcon'; // Ensure CartIcon is included in 
 import Payment from './pages/Payment';
 import Checkout from './pages/Checkout/Checkout'; // Updated path for Checkout
 import OrderStatus from './pages/OrderStatus';
+import Recruitment from './pages/Recruitment';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -49,6 +50,7 @@ function App() {
             <Route path="/payment" element={<Payment />} />
             <Route path="/cart-summary" element={<CartSummary />} />
             <Route path="/order-status" element={<OrderStatus />} />
+            <Route path="/recruitment" element={<Recruitment />} />
           </Routes>
         </div>
 

@@ -80,30 +80,30 @@ function Footer() {
 
       {/* Phần thông tin bản quyền và các biểu tượng mạng xã hội */}
       <div className="container mx-auto text-center py-4 px-4">
-        <div className="flex justify-center space-x-6 mb-4">
+        <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 mb-4">
           <a href="#" className="flex items-center text-black space-x-1">
             <FacebookOutlined style={{ fontSize: '24px' }} />
-            <span>FACEBOOK</span>
+            <span className="hidden md:inline">FACEBOOK</span>
           </a>
           <a href="#" className="flex items-center text-black space-x-1">
             <InstagramOutlined style={{ fontSize: '24px' }} />
-            <span>INSTAGRAM</span>
+            <span className="hidden md:inline">INSTAGRAM</span>
           </a>
           <a href="#" className="flex items-center text-black space-x-1">
             <YoutubeOutlined style={{ fontSize: '24px' }} />
-            <span>YOUTUBE</span>
+            <span className="hidden md:inline">YOUTUBE</span>
           </a>
           <a href="#" className="flex items-center text-black space-x-1">
             <FaTiktok style={{ fontSize: '24px' }} />
-            <span>TIKTOK</span>
+            <span className="hidden md:inline">TIKTOK</span>
           </a>
           <a href="#" className="flex items-center text-black space-x-1">
             <SiZalo style={{ fontSize: '24px' }} />
-            <span>ZALO</span>
+            <span className="hidden md:inline">ZALO</span>
           </a>
         </div>
-        <p>© LeyLa 2024. All rights reserved</p>
-        <img src={BoCongThuong} alt="Đã thông báo bộ công thương" className="mx-auto mt-2 w-48" />
+        <p className="text-sm md:text-base">© LeyLa 2024. All rights reserved</p>
+        <img src={BoCongThuong} alt="Đã thông báo bộ công thương" className="mx-auto mt-2 w-32 md:w-48" />
       </div>
     </footer>
   );

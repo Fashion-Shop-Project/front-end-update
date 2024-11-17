@@ -6,7 +6,7 @@ function useOnScreen(ref) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIntersecting(entry.isIntersecting),
-      { threshold: 0.1 } // xuất hiện khi 10% phần tử vào viewport
+      { threshold: 0.2 } // xuất hiện khi 10% phần tử vào viewport
     );
 
     if (ref.current) {

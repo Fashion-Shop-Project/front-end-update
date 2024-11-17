@@ -4,6 +4,7 @@ import { MenuOutlined, CloseOutlined, UserOutlined, ShoppingCartOutlined, PhoneO
 import logo from '../assets/logo/Leyla.png';
 import CartIcon from './CartIcon'; // Import the CartIcon component
 
+
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCollectionDropdownOpen, setIsCollectionDropdownOpen] = useState(false);
@@ -11,7 +12,9 @@ function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setTimeout(() => {
+      setIsMenuOpen(!isMenuOpen);
+    }, 100);
   };
 
   const toggleSearch = () => {
@@ -71,10 +74,10 @@ function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-20" onClick={toggleMenu}></div>
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-20 transition-opacity duration-300 ease-in-out" onClick={toggleMenu}></div>
       )}
       <div
-        className={`fixed top-0 left-0 w-64 h-full bg-white z-30 p-5 transition-transform ${isMenuOpen ? "transform-none" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 w-64 h-full bg-white z-30 p-5 transform transition-all duration-300 ease-in-out ${isMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
       >
         <button onClick={toggleMenu} className="text-gray-700 mb-6">
           <CloseOutlined style={{ fontSize: "24px" }} />

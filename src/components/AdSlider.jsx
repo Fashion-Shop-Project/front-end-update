@@ -15,7 +15,17 @@ function AdSlider() {
   return (
     <div className="mb-8 flex justify-center">
       <div className="w-full max-w-lg"> {/* Điều chỉnh kích thước của slider */}
-        <h2 className="text-2xl font-bold mb-4 text-center">Quảng cáo</h2>
+        <h2 style={{
+          fontSize: '2rem',
+          fontWeight: 'bold', 
+          marginBottom: '1rem',
+          textAlign: 'center',
+          background: 'linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          animation: 'rainbow 5s ease infinite',
+          backgroundSize: '400% 400%'
+        }}>Quảng cáo</h2>
         <Slider {...settings}>
           <div>
             <img src="/images/products/image1.jpg" alt="Quảng cáo 1" className="w-full h-auto rounded-lg" />

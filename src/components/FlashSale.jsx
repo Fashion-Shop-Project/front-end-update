@@ -74,7 +74,19 @@ function FlashSale() {
 
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-bold mb-4">Flash Sale</h2>
+      <h2 style={{
+        fontSize: '2rem',
+        fontWeight: 'bold',
+        marginBottom: '1rem',
+        textAlign: 'center',
+        color: '#ff4d4d',
+        textTransform: 'uppercase',
+        letterSpacing: '2px',
+        textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
+        padding: '10px',
+        borderBottom: '2px solid #ff4d4d',
+        display: 'inline-block'
+      }}>Flash Sale</h2>
       <CountdownTimer endTime={flashSaleEndTime} />
       <Slider {...settings}>
         {flashSaleProducts.map((product) => (
