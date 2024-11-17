@@ -4,24 +4,31 @@ import FlashSale from "../components/FlashSale";
 import ProductList from "../components/ProductList";
 import useOnScreen from "../components/useOnScreen";
 
+import img1 from '../assets/images/image1.jpg';
+import img2 from '../assets/images/image2.jpg';
+import img3 from '../assets/images/image3.jpg';
+import img4 from '../assets/images/image4.jpg';
+import img5 from '../assets/images/image5.jpg';
+import img6 from '../assets/images/image6.jpg';
+
 function Home() {
   // Dữ liệu mẫu cho sản phẩm mới và sản phẩm cũ
   const newProductsData = [
-    { image: "https://via.placeholder.com/200x200?text=Mới+1", name: "Sản phẩm mới 1", price: 100000 },
-    { image: "https://via.placeholder.com/200x200?text=Mới+2", name: "Sản phẩm mới 2", price: 200000 },
-    { image: "https://via.placeholder.com/200x200?text=Mới+3", name: "Sản phẩm mới 3", price: 300000 },
-    { image: "https://via.placeholder.com/200x200?text=Mới+4", name: "Sản phẩm mới 4", price: 400000 },
-    { image: "https://via.placeholder.com/200x200?text=Mới+5", name: "Sản phẩm mới 5", price: 500000 },
-    { image: "https://via.placeholder.com/200x200?text=Mới+6", name: "Sản phẩm mới 6", price: 600000 },
+    { image: img1, name: "Sản phẩm mới 1", price: 100000 },
+    { image: img2, name: "Sản phẩm mới 2", price: 200000 },
+    { image: img3, name: "Sản phẩm mới 3", price: 300000 },
+    { image: img4, name: "Sản phẩm mới 4", price: 400000 },
+    { image: img5, name: "Sản phẩm mới 5", price: 500000 },
+    { image: img6, name: "Sản phẩm mới 6", price: 600000 },
   ];
   
   const oldProductsData = [
-    { image: "https://via.placeholder.com/200x200?text=Cũ+1", name: "Sản phẩm cũ 1", oldPrice: 500000, price: 400000 },
-    { image: "https://via.placeholder.com/200x200?text=Cũ+2", name: "Sản phẩm cũ 2", oldPrice: 600000, price: 500000 },
-    { image: "https://via.placeholder.com/200x200?text=Cũ+3", name: "Sản phẩm cũ 3", oldPrice: 700000, price: 600000 },
-    { image: "https://via.placeholder.com/200x200?text=Cũ+4", name: "Sản phẩm cũ 4", oldPrice: 800000, price: 700000 },
-    { image: "https://via.placeholder.com/200x200?text=Cũ+5", name: "Sản phẩm cũ 5", oldPrice: 900000, price: 800000 },
-    { image: "https://via.placeholder.com/200x200?text=Cũ+6", name: "Sản phẩm cũ 6", oldPrice: 1000000, price: 900000 },
+    { image: img6, name: "Sản phẩm cũ 1", oldPrice: 500000, price: 400000 },
+    { image: img5, name: "Sản phẩm cũ 2", oldPrice: 600000, price: 500000 },
+    { image: img4, name: "Sản phẩm cũ 3", oldPrice: 700000, price: 600000 },
+    { image: img3, name: "Sản phẩm cũ 4", oldPrice: 800000, price: 700000 },
+    { image: img2, name: "Sản phẩm cũ 5", oldPrice: 900000, price: 800000 },
+    { image: img1, name: "Sản phẩm cũ 6", oldPrice: 1000000, price: 900000 },
   ];
   // State để kiểm soát số lượng sản phẩm hiển thị
   const [visibleNewProducts, setVisibleNewProducts] = useState(4);

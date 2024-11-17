@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
+import img1 from '../../assets/images/image1.jpg';
 function ProductDetail() {
   const { productId } = useParams();
 
@@ -8,7 +8,7 @@ function ProductDetail() {
   const product = {
     id: productId,
     name: "Áo len sọc phối màu tay dài form rộng",
-    image: "/images/products/product1.jpg",
+    image: img1,
     color: "Màu hồng",
     sizes: ["XS", "S", "M", "L", "XL"],
     price: 250000,

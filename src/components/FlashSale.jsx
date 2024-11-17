@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import image1 from '../assets/images/image1.jpg';
+import image2 from '../assets/images/image2.jpg';
+import image3 from '../assets/images/image3.jpg';
+import image4 from '../assets/images/image4.jpg';
+import image5 from '../assets/images/image5.jpg';
 
 function CountdownTimer({ endTime }) {
   const [timeLeft, setTimeLeft] = useState(endTime - Date.now());
@@ -27,12 +32,13 @@ function CountdownTimer({ endTime }) {
 function FlashSale() {
   const flashSaleEndTime = Date.now() + 24 * 60 * 60 * 1000; // 24 giờ từ hiện tại
   const flashSaleProducts = [
-    { id: 1, image: "https://via.placeholder.com/200x200?text=Flash+Sale+1", name: "Flash Sale 1", price: "100,000 VND" },
-    { id: 2, image: "https://via.placeholder.com/200x200?text=Flash+Sale+2", name: "Flash Sale 2", price: "200,000 VND" },
-    { id: 3, image: "https://via.placeholder.com/200x200?text=Flash+Sale+3", name: "Flash Sale 3", price: "300,000 VND" },
-    { id: 4, image: "https://via.placeholder.com/200x200?text=Flash+Sale+4", name: "Flash Sale 4", price: "400,000 VND" },
-    { id: 5, image: "https://via.placeholder.com/200x200?text=Flash+Sale+5", name: "Flash Sale 5", price: "500,000 VND" },
+    { id: 1, image: image1, name: "Flash Sale 1", price: "100,000 VND" },
+    { id: 2, image: image2, name: "Flash Sale 2", price: "200,000 VND" },
+    { id: 3, image: image3, name: "Flash Sale 3", price: "300,000 VND" },
+    { id: 4, image: image4, name: "Flash Sale 4", price: "400,000 VND" },
+    { id: 5, image: image5, name: "Flash Sale 5", price: "500,000 VND" },
   ];
+
 
   // Cấu hình cho slider
   const settings = {

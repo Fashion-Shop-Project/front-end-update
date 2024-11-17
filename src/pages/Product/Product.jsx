@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import ProductFilter from '../../components/ProductFilter';
 import ProductList from '../../components/ProductList';
-
+import img1 from '../../assets/images/image1.jpg';
+import img2 from '../../assets/images/image2.jpg';
+import img3 from '../../assets/images/image3.jpg';
+import img4 from '../../assets/images/image4.jpg';
+import img5 from '../../assets/images/image5.jpg';
 // Hàm định dạng giá tiền
 const formatCurrency = (amount) => {
   return new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(amount);
@@ -9,11 +13,11 @@ const formatCurrency = (amount) => {
 
 function Product() {
   const allProducts = [
-    { id: 1, name: 'Áo Thun Nam', category: 'ao', price: 200000, image: 'https://via.placeholder.com/200x200?text=Áo+Thun' },
-    { id: 2, name: 'Quần Jean Nữ', category: 'quan', price: 350000, image: 'https://via.placeholder.com/200x200?text=Quần+Jean' },
-    { id: 3, name: 'Giày Thể Thao', category: 'giay', price: 1200000, image: 'https://via.placeholder.com/200x200?text=Giày' },
-    { id: 4, name: 'Áo Hoodie', category: 'ao', price: 700000, image: 'https://via.placeholder.com/200x200?text=Hoodie' },
-    { id: 5, name: 'Quần Short', category: 'quan', price: 800000, image: 'https://via.placeholder.com/200x200?text=Quần+Short' },
+    { id: 1, name: 'Áo Thun Nam', category: 'ao', price: 200000, image: img1 },
+    { id: 2, name: 'Quần Jean Nữ', category: 'quan', price: 350000, image: img2 },
+    { id: 3, name: 'Giày Thể Thao', category: 'giay', price: 1200000, image: img3 },
+    { id: 4, name: 'Áo Hoodie', category: 'ao', price: 700000, image: img4 },
+    { id: 5, name: 'Quần Short', category: 'quan', price: 800000, image: img5 },
   ];
 
   const [filteredProducts, setFilteredProducts] = useState(allProducts);

@@ -23,6 +23,7 @@ function CartIcon() {
     },
   ]);
 
+  const [timeoutId, setTimeoutId] = useState(null);
   const [totalPrice, setTotalPrice] = useState(0); // Tổng giá trị giỏ hàng
   const [isCartOpen, setIsCartOpen] = useState(false); // Trạng thái hiển thị dropdown giỏ hàng
 
@@ -57,11 +58,36 @@ function CartIcon() {
     navigate("/checkout"); // Chuyển hướng đến trang checkout
   };
 
+  const handleMouseEnter = () => {
+    // Xóa timeout cũ nếu có
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+      setTimeoutId(null);
+    }
+    setIsCartOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    // Tạo timeout mới
+    const newTimeoutId = setTimeout(() => {
+      setIsCartOpen(false);
+    }, 500); // Delay 5 giây
+    setTimeoutId(newTimeoutId);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [timeoutId]);
+
   return (
     <div
       className="relative ml-4 group"
-      onMouseEnter={() => setIsCartOpen(true)}
-      onMouseLeave={() => setIsCartOpen(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {/* Icon Giỏ Hàng */}
       <div
