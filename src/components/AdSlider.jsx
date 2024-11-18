@@ -9,7 +9,7 @@ function AdSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000, // 5 giây
+    autoplaySpeed: 5000, // 5s
   };
 
   return (

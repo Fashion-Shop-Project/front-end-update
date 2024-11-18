@@ -8,9 +8,7 @@ import Product from './pages/Product/Product';
 import About from './pages/About';
 import ProductDetail from './pages/Product/ProductDetail';
 import AuthTabs from './pages/AuthTabs';
-import CheckoutForm from './pages/Checkout/CheckoutForm'; // Updated path for CheckoutForm
 import CartSummary from './pages/CartSummary';
-import CartIcon from './components/CartIcon'; // Ensure CartIcon is included in your Navbar or elsewhere
 import Payment from './pages/Payment';
 import Checkout from './pages/Checkout/Checkout'; // Updated path for Checkout
 import OrderStatus from './pages/OrderStatus';
