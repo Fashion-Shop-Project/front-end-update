@@ -22,7 +22,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-md p-1 fixed w-full z-10">
+    <nav className="bg-white shadow-md p-1 fixed w-full z-10 mb-4">
       <div className="container mx-auto flex items-center justify-between md:w-4/5 w-full">
         <button onClick={toggleMenu} className="text-gray-700 focus:outline-none">
           <MenuOutlined style={{ fontSize: "24px", padding: "10px" }} />

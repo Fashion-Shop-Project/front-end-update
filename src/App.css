@@ -68,3 +68,16 @@
   opacity: 1;
   transform: scale(1);
 }
+
+/* Thêm padding-top cho main content */
+.main-content {
+  padding-top: 80px; /* Điều chỉnh giá trị này tùy theo chiều cao của navbar */
+}
+
+/* Hoặc nếu navbar fixed */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
