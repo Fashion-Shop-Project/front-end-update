@@ -1,62 +1,37 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import News from './pages/News';
-import Product from './pages/Product/Product';
-import About from './pages/About';
-import ProductDetail from './pages/Product/ProductDetail';
-import AuthTabs from './pages/AuthTabs';
-import CartSummary from './pages/CartSummary';
-import Payment from './pages/Payment';
-import Checkout from './pages/Checkout/Checkout'; // Updated path for Checkout
-import OrderStatus from './pages/OrderStatus';
-import Recruitment from './pages/Recruitment';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import AdminRoutes from './features/admin/routes/AdminRoutes';
+import UserRoutes from './features/user/routes/UserRoutes';
+import Login from './features/auth/pages/Login';
+import Register from './features/auth/pages/Register';
+import { CartProvider } from './contexts/CartContext.jsx';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-function App() {
+const App = () => {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
-        {/* Navbar Component */}
-        <Navbar />
-
-        {/* Main Content */}
-        <div className="flex-grow mt-20">
-          <Routes>
-            {/* Home Page */}
-            <Route path="/" element={<Home />} />
-
-            {/* News Page */}
-            <Route path="/news" element={<News />} />
-
-            {/* Product Listing and Product Details */}
-            <Route path="/product" element={<Product />} />
-            <Route path="/product/:productId" element={<ProductDetail />} />
-
-            {/* About Page */}
-            <Route path="/about" element={<About />} />
-
-            {/* Authentication */}
-            <Route path="/auth" element={<AuthTabs />} />
-
-            {/* Checkout and Cart Summary */}
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route path="/cart-summary" element={<CartSummary />} />
-            <Route path="/order-status" element={<OrderStatus />} />
-            <Route path="/recruitment" element={<Recruitment />} />
-          </Routes>
+      <CartProvider>
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <main className="flex-grow">
+            <Routes>
+              {/* Admin routes */}
+              <Route path="/admin/*" element={<AdminRoutes />} />
+              
+              {/* Auth routes */}
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              
+              {/* User routes */}
+              <Route path="/*" element={<UserRoutes />} />
+            </Routes>
+          </main>
+          <Footer />
         </div>
-
-        {/* Footer Component */}
-        <Footer />
-      </div>
+      </CartProvider>
     </Router>
   );
-}
+};
 
 export default App;

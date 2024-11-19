@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MenuOutlined, CloseOutlined, UserOutlined, ShoppingCartOutlined, PhoneOutlined, SearchOutlined, RightOutlined, DownOutlined } from "@ant-design/icons";
-import logo from '../assets/logo/Leyla.png';
+import logo from '../../assets/logo/Leyla.png';
 import CartIcon from './CartIcon'; // Import the CartIcon component
 
 

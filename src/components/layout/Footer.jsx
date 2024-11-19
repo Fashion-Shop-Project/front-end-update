@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../assets/logo/Leyla.png';
-import BoCongThuong from '../assets/logo/BoCongThuong.png';
+import logo from '../../assets/logo/Leyla.png';
+import boCongThuong from '../../assets/logo/BoCongThuong.png';
 import { ClockCircleOutlined, PhoneOutlined, ShopOutlined, TruckOutlined, FacebookOutlined, InstagramOutlined, YoutubeOutlined } from '@ant-design/icons';
 import { FaTiktok } from 'react-icons/fa';
 import { SiZalo } from 'react-icons/si';
@@ -103,7 +103,7 @@ function Footer() {
           </a>
         </div>
         <p className="text-sm md:text-base">© LeyLa 2024. All rights reserved</p>
-        <img src={BoCongThuong} alt="Đã thông báo bộ công thương" className="mx-auto mt-2 w-32 md:w-48" />
+        <img src={boCongThuong} alt="Đã thông báo bộ công thương" className="mx-auto mt-2 w-32 md:w-48" />
       </div>
     </footer>
   );
